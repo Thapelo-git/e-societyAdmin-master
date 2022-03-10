@@ -29,3 +29,21 @@
     border: none;
     color:#000;
 }
+
+/* media  */
+@media screen and (min-width:1900px){
+    .edit-password-btn{
+        background-color: transparent;
+        border: none;
+        color:#000;
+    }
+    .acc-icons-edit{
+        position: absolute;
+        padding: 0.3rem;
+        margin-left: 0.5rem;
+        font-size: 1.2rem;
+        color: grey;
+        right: 27rem;
+        margin-top:-2.4rem;
+    }
+}

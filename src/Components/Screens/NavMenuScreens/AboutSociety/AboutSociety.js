@@ -74,9 +74,7 @@ const AboutSociety = () => {
                         <i class="ps-4 ms-2 bi bi-chat-left-text-fill media-icon text-success"></i>
                      </div>
                     </Modal.Body>
-
                   </Modal>
-                
                 
             </div>
           </Card.Body>

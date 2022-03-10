@@ -4,3 +4,14 @@
 input{
     border-radius: 3rem;
 }
+
+/* media */
+@media screen and (min-width:1900px){
+   .header-text{
+       padding-top: 1.5rem!important;
+       background-color: red;
+   }
+   .input-in{
+    border-radius: 3rem;
+    }
+}

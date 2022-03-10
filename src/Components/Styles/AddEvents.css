@@ -31,4 +31,8 @@
     display: inline-block;
 }
 
+/* media */
+@media screen and (min-width:1900px){
+    
+}
 

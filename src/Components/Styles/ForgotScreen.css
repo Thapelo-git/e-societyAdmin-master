@@ -5,6 +5,8 @@
     background-size: cover;
   } */
   .forgot-main-container{
+    height:100vh;
+    width:100vw;
     background: #000957;
     background: linear-gradient(160deg,#000957 0%, #2fa4ff 40%, #0e3eda 80%);
     background: -webkit-linear-gradient(160deg,#000957 0%, #2fa4ff 40%, #0e3eda 80%);
@@ -18,17 +20,23 @@
     align-content: center;
     height: 100vh;
   }
+
   .bg-con{
     border-radius: 1rem;
   }
-  
+
+  .forgot-con-2{
+    width: 100vw;
+    height:100vh;
+    background-color: #000;
+  }
   
  .con-forgot{
-    background-color: transparent;
     border-radius: 1rem;
     border: none;
     border-width: none;
     height: 60vh;
+    width: 50vw;
   }
   
   .proj-name{
@@ -121,22 +129,41 @@
     margin-left: 5rem;
     margin-right: 5rem;
   }
-  
-  .info-con{
-    margin-left: 10rem;
-    margin-right: 10rem;
-    width: 60%;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-  }
-  
-  .auth-img{
-    width: 90%;
-    object-fit: fill;
-  }
-  
+    
   .login-acc{
     margin-top: 2rem;
+  }
+
+  /* media queries */
+  @media screen and (min-width:1900px){
+    .main-forgot-container{
+      background-color: transparent;
+      width: 60vw;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      height: 100vh;
+    }
+    .con-forgot{
+      border-radius: 1rem;
+      border: none;
+      border-width: none;
+      height: 50vh;
+      width: 45vw;
+    }
+    .acc-update-btn{
+      margin-top: 4rem;
+    }
+    .info-con-forgot{
+      width: 40vw;
+      margin: auto;
+      padding-top: 1.5rem;
+    }
+    .instructions-forgot{
+      padding-top: 0.3rem;
+    }
+    .inputs{
+      padding-top:1.1rem;
+      padding-bottom:0.5rem;
+    }
   }

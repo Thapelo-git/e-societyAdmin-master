@@ -24,7 +24,7 @@ const NavAndRouters = ({otherNavRouters}) => {
 
 							<div className="col p-3 ms-3 me-3 info-container">
 							
-									<div className="container-fluid info-con bg-light w-100 h-100 p-2">
+									<div className="container-fluid info-con w-100 h-100 p-2">
                   <Switch>
                       {/* <Route path='/' element={<AddEventsScreen/>} exact="true"/> */}
                       <Route  path='/societyMembers'><SocietyMembersScreen/></Route>

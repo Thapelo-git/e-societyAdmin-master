@@ -27,3 +27,11 @@
 ::-webkit-scrollbar-thumb{
     background: #fff;
 }
+
+/* media */
+@media screen and (min-width:1900px){
+    .events-container{
+        /* background-color: red; */
+        width: 55vw!important;
+    }
+}

@@ -113,12 +113,11 @@ li{
 }
 
 /* responsiveness */
-/* @media (max-device-width: 1600px) { 
-
+@media screen and (min-width:1900px){
 	.con{
 		background-color: RGBA(2,37,161,0.36);
-		width: 200px;
-		height: 500px;
+		width: 50%;
+		height: 800px;
 		margin: 2%;
 		color: white;
 		border-radius: 2rem;
@@ -131,82 +130,12 @@ li{
 		text-align: center;
 		position: relative;
 		display: flex;
+	}
+	.nav-main-container{
+		padding-top: 3rem;
+		height: 750px;
+		margin: auto;
+		padding-bottom: 1.5rem;
+		position: sticky;
 	}
 }
-
-@media (max-width: 1350px) {
-	.con{
-		background-color: RGBA(2,37,161,0.36);
-		width: 200px;
-		height: 500px;
-		margin: 2%;
-		color: white;
-		border-radius: 2rem;
-		padding-bottom: 5%;
-		padding-top: 5%;
-		padding-left: 2%;
-		padding-right: 2%;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		position: relative;
-		display: flex;
-	}
-}
-@media (max-width: 1200px) {
-	.con{
-		background-color: RGBA(2,37,161,0.36);
-		width: 200px;
-		height: 500px;
-		margin: 2%;
-		color: white;
-		border-radius: 2rem;
-		padding-bottom: 5%;
-		padding-top: 5%;
-		padding-left: 2%;
-		padding-right: 2%;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		position: relative;
-		display: flex;
-	}
-}
-@media (max-width: 1024px) {
-	.con{
-		background-color: RGBA(2,37,161,0.36);
-		width: 200px;
-		height: 500px;
-		margin: 2%;
-		color: white;
-		border-radius: 2rem;
-		padding-bottom: 5%;
-		padding-top: 5%;
-		padding-left: 2%;
-		padding-right: 2%;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		position: relative;
-		display: flex;
-	}
-}
-@media (max-width: 860px) {
-	.con{
-		background-color: RGBA(2,37,161,0.36);
-		width: 200px;
-		height: 500px;
-		margin: 2%;
-		color: white;
-		border-radius: 2rem;
-		padding-bottom: 5%;
-		padding-top: 5%;
-		padding-left: 2%;
-		padding-right: 2%;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		position: relative;
-		display: flex;
-	}
-} */

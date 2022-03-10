@@ -38,7 +38,7 @@ const LoginScreen = () => {
       }
   return <div className="container-fluid bg-dark w-100 h-100 login-main-container p-3">
 
-    <Container fluid className="p-2 main-login-con d-flex" >
+    <Container fluid className="p-2 main-login-con d-flex">
 
         <div className="container-fluid mx-auto my-auto w-100 ">
             <div className="row bg-con">

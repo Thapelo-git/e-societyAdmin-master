@@ -20,108 +20,17 @@
   border-radius:15px;
 }
 
-
-
-/* .bg-con{
-  border-radius: 1rem;
+/* media queries */
+@media screen and (min-width:1900px){
+  .main-register-con{
+    background-color: transparent;
+    width: 55vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+  }
+  .card-register{
+    height: 60vh;
+  }
 }
-
-.login-con{
-  justify-content: 'center';
-}
-
-.con-login{
-  background-color: transparent;
-  border-radius: 1rem;
-  border: none;
-  border-width: none;
-}
-
-.proj-name{
-  text-transform: capitalize;
-}
-
-.pass-email{
-  width: 90%;
-  margin-left: 3rem;
-}
-
-.acc-icon-input {
-  position: absolute;
-  padding: 0.3rem;
-  margin-left: 0.5rem;
-  font-size: 1.2rem;
-  color: grey;
-}
-
-#userEmailAccount {
-  padding-left: 3rem;
-  box-sizing: border-box;
-  outline: none;
-  display: block;
-  width: 100%;
-}
-
-.acc-update-btn {
-  width: 40%;
-  display: block;
-  margin: auto;
-  margin-top: 2rem;
-  background-color: #0225A2;
-  outline: none;
-  border: none
-}
-
-.inputs{
-  margin: auto;
-}
-
-.form{
-  margin: auto;
-}
-
-.inputs-con{
-  margin: auto;
-  justify-content: center;
-}
-
-.input-in{
-  margin: auto;
-}
-
-.wel-txt{
-  font-size: 1rem;
-  margin-top: 2rem;
-}
-.instructions{
-  font-size: 0.7rem;
-  color: #333;
-  text-align: center;
-  margin-top: -0.5rem;
-}
-
-hr{
-  margin: auto;
-  color: #0225A2;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-con{
-  margin-left: 5rem;
-  margin-right: 5rem;
-  width: 80%;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.auth-img{
-  width: 90%;
-  object-fit: fill;
-}
-
-.login-acc{
-  margin-top: 2rem;
-} */

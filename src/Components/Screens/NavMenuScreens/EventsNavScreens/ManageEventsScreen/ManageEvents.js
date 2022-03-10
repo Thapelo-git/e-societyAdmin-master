@@ -54,10 +54,7 @@ const onDelete =(id)=>{
   // carousel
   return <>
       <div className="text-dark mt-5">
-      {/* <div className="notification text-end p-4">
-          <i class="bi bi-bell-fill not-icon text-white"></i>
-    </div> */}
-        {/* <h4 className="fw-bold p-4 text-secondary header">WELCOME BACK</h4> */}
+ 
         <h6 className="fw-bold p-4 name">{Firstname}</h6>
         
       {/* <hr/> */}
@@ -74,12 +71,6 @@ const onDelete =(id)=>{
                   <p className="text-secondary text-start links d-inline-block">Create Events</p>
               </a>
           </li>
-
-          {/* <li className="ps-4 ms-4 list-event d-inline-block">
-              <a href="/eventReport"> 
-                  <p className="text-secondary text-start links d-inline-block">Events Reports</p>
-              </a>
-          </li> */}
 
         </ul>
       </div>

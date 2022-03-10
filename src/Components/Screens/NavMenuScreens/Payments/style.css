@@ -2,7 +2,22 @@
     width: 100%!important;
     height: 100%!important;
 }
+
 .pay-table{
     border: 1px solid #eee;
     font-size: 0.88rem;
 }
+
+@media screen and (min-width:1900px){
+    .pay-table{
+        border: 1px solid #333;
+        font-size: 0.88rem;
+    }
+    .header-text{
+        padding-top: 2rem;
+    }
+    .payments-container-main{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+ }
