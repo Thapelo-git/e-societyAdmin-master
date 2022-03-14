@@ -89,6 +89,7 @@ const onDelete =(id)=>{
             <option selected>Choose...</option>
             <option  name="Wedding" >Wedding</option>
             <option name="Party" >Party</option>
+            <option name="Funeral" >Funeral</option>
           </select>
 
           <div className="mb-7 mt-7 w-50 input-in">
