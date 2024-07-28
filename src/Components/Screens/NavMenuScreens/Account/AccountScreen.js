@@ -14,6 +14,8 @@ const AccountScreen = () => {
   const passwordRef=useRef()
   const [Firstname,setFirstname]=useState('')
     const [Phonenumber,setPhonenumber]=useState('')
+    const [Address,setAddress]=useState('')
+    const [Lastname,setLastname]=useState('')
   const {currentUser,updateEmail,updatePassword}=useAuth()
   const [error,setError]=useState('')
   const user = auth.currentUser.uid
@@ -22,6 +24,8 @@ const AccountScreen = () => {
       
       setFirstname(snap.val() && snap.val().Firstname);
   setPhonenumber(snap.val().Phonenumber)
+  setAddress(snap.val().Address)
+  setLastname(snap.val().LastName)
 
     })
     
@@ -64,18 +68,36 @@ const AccountScreen = () => {
 
             <div className="mb-4 mt-5 w-75 input-in">
             {error && <Alert variant="danger">{error}</Alert>}
-                  <label for="exampleInputEmail1" class="form-label acc-label">Society Pin</label>
+                  <label for="exampleInputEmail1" class="form-label acc-label">Name</label>
                   <div className="acc-icon-input"><i class="bi bi-person-fill"></i></div>
                   <input type="email" 
                   class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder={Firstname}></input>
               </div>
 
               <div className="mb-4 mt-2 w-75 input-in">
-                  <label for="exampleInputEmail1" class="form-label acc-label">Society Email Address</label>
+                  <label for="exampleInputEmail1" class="form-label acc-label"> Email Address</label>
                   <div className="acc-icon-input"><i class="bi bi-envelope-fill"></i></div>
                   <input type="email" ref={emailRef} required defaultValue={currentUser?.email}
                    class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='lawrencesekgoka085@gmail.com'></input>
               </div>
+              <div className="row">
+                                        <div className="col col-md-6">
+                                            <div className="mb-4 input-in">
+                                                <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
+                                                <input type="name" 
+                                                    class="form-control" id="userEmailAccount" aria-describedby="userEmail"
+                                                     placeholder={Address}></input>
+                                            </div>
+                                        </div>
+                                        <div className="col col-md-6">
+                                            <div className="mb-4 input-in">
+                                                <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
+                                                <input type="name" 
+                                                    class="form-control" id="userEmailAccount" 
+                                                    aria-describedby="userEmail" placeholder={Lastname}></input>
+                                            </div>
+                                        </div>
+                                    </div>
 
               <div className="mb-4 mt-2 w-75 input-in">
                   <label for="exampleInputEmail1" class="form-label acc-label">Phone Number</label>
@@ -83,13 +105,13 @@ const AccountScreen = () => {
                   <input type="tel" class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder={Phonenumber}></input>
               </div>
 
-              <div className="mb-4 mt-2 w-75 input-in">
+              {/* <div className="mb-4 mt-2 w-75 input-in">
                   <label for="exampleInputEmail1" class="form-label acc-label">Password</label>
                   <div className="acc-icon-input"><i class="bi bi-lock-fill"></i></div>
                   <input type="password" ref={passwordRef} disabled  
                   class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='**************'></input>
                   <div className="acc-icons-edit text-primary">
-                    {/* <button onclick={handleShow} className="btn btn-primary">Edit</button> */}
+                    
                     <Button type="button" onClick={handleShowModal} className="edit-password-btn">Edit</Button>
                   </div>
 
@@ -122,9 +144,9 @@ const AccountScreen = () => {
 
                       </Modal.Footer>
                     </Modal>
-              </div>
+              </div> */}
 
-              <Button type="submit" className="btn d-block acc-update-btn mt-4">UPDATE DETAILS</Button>
+              {/* <Button type="submit" className="btn d-block acc-update-btn mt-4">UPDATE DETAILS</Button> */}
 
         </Form>
       </div>
