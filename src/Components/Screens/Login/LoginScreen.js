@@ -30,7 +30,7 @@ const LoginScreen = () => {
               }
           })
           
-          history.push('/societyMembers')
+          history.push('/account')
         } catch{
           setError('failed to sign in check Email/Password')
         }
