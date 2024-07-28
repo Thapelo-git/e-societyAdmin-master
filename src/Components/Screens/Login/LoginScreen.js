@@ -47,7 +47,7 @@ const LoginScreen = () => {
                     <Card className="con-login">
                         <Card.Body className="justify-content-center text-center con-login">
                             <img src={Logo} alt="logo"/>
-                            <h5 className="text-secondary proj-name">e-society administrator</h5>
+                            <h5 className="text-secondary proj-name">Student Register</h5>
                             {error && <Alert variant="danger">{error}</Alert>}
                             <div className="inputs mt-3 justify-content-center align-items-center tex-center">
                                 <Form className="form" onSubmit={handleSubmit}>
@@ -84,7 +84,7 @@ const LoginScreen = () => {
 
                 <div className="col col-md-5 d-flex">
                     <div className="right-container-login mx-auto my-auto">
-                        <h5 className="text-center p-2 text-primary fw-bold wel-txt">Welcome To e-Society Administrator Portal</h5>
+                        <h5 className="text-center p-2 text-primary fw-bold wel-txt">Welcome </h5>
                         <p className="instructions">please enter your verified credentials to login to our system.</p>
                         <img src={auth} alt="auth" className="auth-img"/>
                         <p className="text-secondary text-center login-acc">Don't have an account? <Link to='/RegisterScreen' className="ms-3 mt-3 text-primary text-center login-acc">Create Society </Link></p>

@@ -62,14 +62,14 @@ function App() {
               ) : (
                 <>
                   <NavAndRouters>
-                    <Route path='/societyMembers'><SocietyMembersScreen /></Route>
+                    {/* <Route path='/societyMembers'><SocietyMembersScreen /></Route>
                     <Route  path='/reports' ><ReportScreen /></Route>
-                    <Route  path='/about' ><AboutSociety /></Route>
+                    <Route  path='/about' ><AboutSociety /></Route> */}
                     <Route  path='/account'><AccountScreen /></Route>
-                    <Route exact path='/events'><AddEventsScreen /></Route>
+                    {/* <Route exact path='/events'><AddEventsScreen /></Route>
                     <Route  path="/manage"><ManageEvents/></Route> 
                     <Route  path="/eventReport" ><EventReports/></Route>
-                    <Route  path="/createEvents"><CreateEvents/></Route>
+                    <Route  path="/createEvents"><CreateEvents/></Route> */}
                   </NavAndRouters>
 
                   {/* <Route exact path='/societyMembers'><SocietyMembersScreen /></Route>

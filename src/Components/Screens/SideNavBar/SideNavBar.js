@@ -34,7 +34,7 @@ const SideNavBar = () => {
                 <div className="nav-menu">
 
                     <ul className="nav-items">
-                        <li className="p-0 m-0 list-one" id="events">
+                        {/* <li className="p-0 m-0 list-one" id="events">
                             <a href="/events">
                                     <div className="icon">
                                         <i class="bi bi-grid-fill nav-icons"></i>
@@ -50,9 +50,9 @@ const SideNavBar = () => {
                                     </div>
                                     Society Members
                                 </a>
-                        </li>
+                        </li> */}
 
-                        <li className="p-0 m-0 list-down" id="reports">
+                        {/* <li className="p-0 m-0 list-down" id="reports">
                             <a href="/reports">
                                     <div className="icon">
                                         <i class="bi bi-file-pdf-fill nav-icons"></i>
@@ -68,7 +68,7 @@ const SideNavBar = () => {
                                     </div>
                                     Payments
                                 </a>
-                        </li>
+                        </li> */}
 
                         <li className="p-0 m-0 list-down" id="account">
                             <a href="/account">
@@ -78,22 +78,7 @@ const SideNavBar = () => {
                                     Account
                                 </a>
                         </li>
-
-                        <li className="p-0 m-0 list-down" id="about">
-                            <a href="/about">
-                                    <div className="icon">
-                                        <i class="bi bi-info-square-fill nav-icons"></i>
-                                    </div>
-                                    About Society
-                                </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <div className="logout-btn-con pt-4 mt-4">
-                    <li className="logout">
+                        <li className="logout">
                             <button className="btn btn-danger" onClick={handleLogout}>
                                     <div className="icons">
                                             <i class="bi bi-box-arrow-right"></i>
@@ -101,6 +86,22 @@ const SideNavBar = () => {
                                     Logout
                             </button>
                     </li>
+
+                        {/* <li className="p-0 m-0 list-down" id="about">
+                            <a href="/about">
+                                    <div className="icon">
+                                        <i class="bi bi-info-square-fill nav-icons"></i>
+                                    </div>
+                                    About Society
+                                </a>
+                        </li> */}
+
+                    </ul>
+
+                </div>
+
+                <div className="logout-btn-con pt-4 mt-4">
+                   
                 </div>
             </div>
 

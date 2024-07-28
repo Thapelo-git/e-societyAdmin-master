@@ -8,12 +8,13 @@ import { useAuth } from "../../../contexts/AuthContext";
 import { Link, useHistory } from 'react-router-dom'
 import { db } from "../../../firebase";
 import { auth } from "../../../firebase";
-
+// import Dropdown from 'bootstrap-react/Dropdown'
 const RegisterScreen = () => {
     const [Phonenumber, setPhonenumber] = useState("");
     const [Firstname, setFirstname] = useState("");
     const [Lastname, setLastname] = useState("");
-
+    const [Address, setAddress] = useState("");
+    const [Title, setTitle] = useState("");
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
@@ -34,10 +35,11 @@ const RegisterScreen = () => {
             await auth.createUserWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
                 .then(res => {
                     const user={
-                        societyCode: Firstname,
-                        Address: Lastname,
+                        Firstname: Firstname,
+                        LastName: Lastname,
+                        Address:Address,
                         emailRef: emailRef.current.value,
-                        SocietyName: Phonenumber,
+                        Title: Title,
                         uid: res.user.uid
                     }
                       console.log(user)
@@ -53,7 +55,7 @@ const RegisterScreen = () => {
                           // saving error
                           console.log('no data')
                         }
-                        history.push('/societyMembers')
+                        history.push('/account')
                     }).catch((error) => {
                         console.log(error, "----------------------")
                         setError(error)
@@ -72,14 +74,14 @@ const RegisterScreen = () => {
                 <Card className="w-100 card-register bg-light">
                     
                     <Card.Body className="justify-content-center text-center con-login">
-                        <img src={Logo} alt="logo" />
+                        {/* <img src={Logo} alt="logo" /> */}
 
-                        <div className="justify-content-center text-center align-items-center info-con-register">
+                        {/* <div className="justify-content-center text-center align-items-center info-con-register">
                             <hr className="p-0 m-0 bg-secondary" />
                             <p className="text-secondary pt-2">Please enter society credentials to register for an account.</p>
                             {error && <Alert variant="danger">{error}</Alert>}
                             <hr className="p-0 m-0 bg-secondary" />
-                        </div>
+                        </div> */}
 
                         <div className="inputs mt-3 justify-content-center align-items-center tex-center">
                             <Form className="form pe-5 ps-5 mt-4" onSubmit={handleSubmit}>
@@ -94,11 +96,20 @@ const RegisterScreen = () => {
                                             </div>
                                         </div>
                                         <div className="col col-md-6">
-                                            <div className="mb-4 input-in">
-                                                <div className="acc-icon-input"><i class="bi bi-telephone-fill"></i></div>
-                                                <input type="tel" onChange={(e) => setPhonenumber(e.target.value)}
-                                                    class="form-control" id="userEmailAccount" aria-describedby="userPhone" placeholder='Enter Society Name'></input>
-                                            </div>
+                                        {/* <Dropdown>
+      <Dropdown.Toggle  id="dropdown-basic" >
+       SELECT TITLE
+
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu >
+        <Dropdown.Item>Mr</Dropdown.Item>
+        <Dropdown.Item >Mrs</Dropdown.Item>
+        <Dropdown.Item >Miss</Dropdown.Item>
+        <Dropdown.Item >Dr</Dropdown.Item>
+        <Dropdown.Item >Prof</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown> */}
                                         </div>
                                     </div>
 
@@ -107,14 +118,30 @@ const RegisterScreen = () => {
                                             <div className="mb-4 input-in">
                                                 <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
                                                 <input type="name" onChange={(e) => setFirstname(e.target.value)}
-                                                    class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='Enter Society Code'></input>
+                                                    class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='Enter Name'></input>
                                             </div>
                                         </div>
                                         <div className="col col-md-6">
                                             <div className="mb-4 input-in">
                                                 <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
                                                 <input type="name" onChange={(e) => setLastname(e.target.value)}
-                                                    class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='Enter Location'></input>
+                                                    class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='Enter Lastname'></input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        {/* <div className="col col-md-6">
+                                            <div className="mb-4 input-in">
+                                                <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
+                                                <input type="name" onChange={(e) => setFirstname(e.target.value)}
+                                                    class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='Enter Name'></input>
+                                            </div>
+                                        </div> */}
+                                        <div className="col col-md-6">
+                                            <div className="mb-4 input-in">
+                                                <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
+                                                <input type="name" onChange={(e) => setAddress(e.target.value)}
+                                                    class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='Enter Address'></input>
                                             </div>
                                         </div>
                                     </div>
