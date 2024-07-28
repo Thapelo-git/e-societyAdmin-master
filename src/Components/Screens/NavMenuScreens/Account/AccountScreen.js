@@ -82,6 +82,7 @@ const AccountScreen = () => {
               </div>
               <div className="row">
                                         <div className="col col-md-6">
+                                        <label for="exampleInputEmail1" class="form-label acc-label"> Address</label>
                                             <div className="mb-4 input-in">
                                                 <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
                                                 <input type="name" 
@@ -90,6 +91,7 @@ const AccountScreen = () => {
                                             </div>
                                         </div>
                                         <div className="col col-md-6">
+                                        <label for="exampleInputEmail1" class="form-label acc-label"> Surname</label>
                                             <div className="mb-4 input-in">
                                                 <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
                                                 <input type="name" 
