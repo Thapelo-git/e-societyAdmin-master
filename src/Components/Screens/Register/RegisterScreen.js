@@ -14,6 +14,7 @@ const RegisterScreen = () => {
     const [Firstname, setFirstname] = useState("");
     const [Lastname, setLastname] = useState("");
     const [Address, setAddress] = useState("");
+    const [selector, setSelector] = useState("");
     const [Title, setTitle] = useState("");
     const emailRef = useRef()
     const passwordRef = useRef()
@@ -40,6 +41,7 @@ const RegisterScreen = () => {
                         Address:Address,
                         emailRef: emailRef.current.value,
                         Title: Title,
+                        Selector:selector,
                         uid: res.user.uid
                     }
                       console.log(user)
@@ -68,7 +70,7 @@ const RegisterScreen = () => {
 
     }
 
-    return <div className="container-fluid w-100 h-100 m-0 p-0 main-container-register bg-primary d-flexp-3">
+    return <div className="container-fluid w-100 h-100 m-0 p-0 main-container-register bg-primary d-flex p-3">
         <Container className="p-2 main-register-con d-flex">
             
                 <Card className="w-100 card-register bg-light">
@@ -76,12 +78,12 @@ const RegisterScreen = () => {
                     <Card.Body className="justify-content-center text-center con-login">
                         {/* <img src={Logo} alt="logo" /> */}
 
-                        {/* <div className="justify-content-center text-center align-items-center info-con-register">
+                        <div className="justify-content-center text-center align-items-center info-con-register">
                             <hr className="p-0 m-0 bg-secondary" />
-                            <p className="text-secondary pt-2">Please enter society credentials to register for an account.</p>
+                            <p className="text-secondary pt-2">Please enter  credentials to register for an account.</p>
                             {error && <Alert variant="danger">{error}</Alert>}
                             <hr className="p-0 m-0 bg-secondary" />
-                        </div> */}
+                        </div>
 
                         <div className="inputs mt-3 justify-content-center align-items-center tex-center">
                             <Form className="form pe-5 ps-5 mt-4" onSubmit={handleSubmit}>
@@ -96,20 +98,15 @@ const RegisterScreen = () => {
                                             </div>
                                         </div>
                                         <div className="col col-md-6">
-                                        {/* <Dropdown>
-      <Dropdown.Toggle  id="dropdown-basic" >
-       SELECT TITLE
-
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu >
-        <Dropdown.Item>Mr</Dropdown.Item>
-        <Dropdown.Item >Mrs</Dropdown.Item>
-        <Dropdown.Item >Miss</Dropdown.Item>
-        <Dropdown.Item >Dr</Dropdown.Item>
-        <Dropdown.Item >Prof</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown> */}
+                                        <select class="custom-select" id="gender3" 
+          value={selector} onChange={e=>setSelector(e.target.value)} >
+            <option selected>Choose...</option>
+            <option  name="Mr" >Mr</option>
+            <option name="Miss" >Miss</option>
+            <option name="Mrs" >Mrs</option>
+            <option name="DR" >DR</option>
+            <option name="PROF" >PROF</option>
+          </select>
                                         </div>
                                     </div>
 
@@ -130,13 +127,13 @@ const RegisterScreen = () => {
                                         </div>
                                     </div>
                                     <div className="row">
-                                        {/* <div className="col col-md-6">
+                                        <div className="col col-md-6">
                                             <div className="mb-4 input-in">
                                                 <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
-                                                <input type="name" onChange={(e) => setFirstname(e.target.value)}
-                                                    class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='Enter Name'></input>
+                                                <input type="name" onChange={(e) => setTitle(e.target.value)}
+                                                    class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='Highest Qualification'></input>
                                             </div>
-                                        </div> */}
+                                        </div>
                                         <div className="col col-md-6">
                                             <div className="mb-4 input-in">
                                                 <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
@@ -149,7 +146,7 @@ const RegisterScreen = () => {
                                     <div className="row">
                                         <div className="col col-md-6">
                                             <div className="mb-0  input-in">
-                                                <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
+                                                <div className="acc-icon-input"><i class="bi bi-lock-fill"></i></div>
                                                 <input type="password" required ref={passwordRef}
                                                     class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder='Enter Password'></input>
                                             </div>
@@ -165,7 +162,7 @@ const RegisterScreen = () => {
 
                                 </div>
 
-                                <Button type="submit" className="btn d-block acc-update-btn mt-4">CREATE SOCIETY</Button>
+                                <Button type="submit" className="btn d-block acc-update-btn mt-4">CREATE Account</Button>
 
                                 <div className="row pt-3 w-50 m-auto">
                                     <div className="col col-md-12 ps-3">

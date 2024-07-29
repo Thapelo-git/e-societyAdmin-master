@@ -87,7 +87,7 @@ const LoginScreen = () => {
                         <h5 className="text-center p-2 text-primary fw-bold wel-txt">Welcome </h5>
                         <p className="instructions">please enter your verified credentials to login to our system.</p>
                         <img src={auth} alt="auth" className="auth-img"/>
-                        <p className="text-secondary text-center login-acc">Don't have an account? <Link to='/RegisterScreen' className="ms-3 mt-3 text-primary text-center login-acc">Create Society </Link></p>
+                        <p className="text-secondary text-center login-acc">Don't have an account? <Link to='/RegisterScreen' className="ms-3 mt-3 text-primary text-center login-acc">Create Account </Link></p>
                         
                     </div>
                     

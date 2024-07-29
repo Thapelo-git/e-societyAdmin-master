@@ -16,6 +16,7 @@ const AccountScreen = () => {
     const [Phonenumber,setPhonenumber]=useState('')
     const [Address,setAddress]=useState('')
     const [Lastname,setLastname]=useState('')
+    const [Selector,setSelector]=useState('')
   const {currentUser,updateEmail,updatePassword}=useAuth()
   const [error,setError]=useState('')
   const user = auth.currentUser.uid
@@ -23,9 +24,10 @@ const AccountScreen = () => {
     db.ref(`/user/`+ user).on('value',snap=>{
       
       setFirstname(snap.val() && snap.val().Firstname);
-  setPhonenumber(snap.val().Phonenumber)
+  setPhonenumber(snap.val().Title)
   setAddress(snap.val().Address)
   setLastname(snap.val().LastName)
+  setSelector(snap.val().Selector)
 
     })
     
@@ -53,6 +55,20 @@ const AccountScreen = () => {
     })
     
   }
+  const updateBooking = (user,Phonenumber,Address,Lastname,Firstname) => {
+
+    db.ref('user').child(user).update({Title:Phonenumber,
+      Address:Address,LastName:Lastname,Firstname:Firstname
+    })
+    .then(()=>db.ref('user').once('value'))
+    .then(snapshot=>snapshot.val())
+    .catch(error => ({
+      errorCode: error.code,
+      errorMessage: error.message
+    }));
+    //  db.ref('/BookEvent/').set(bookings[bookingNumb].Status)
+    
+  };
 
   // modal
   const [show, setShow] = useState(false);
@@ -61,17 +77,24 @@ const AccountScreen = () => {
   const handleShowModal = () => setShow(true);
 
   return <div className="container-fluid account-main-container m-0 p-0">
-      <h4 className="fw-bold p-4 text-secondary">ACCOUNT DETAILS</h4>
+      {/* <h4 className="fw-bold p-4 text-secondary">ACCOUNT DETAILS</h4> */}
 
       <div className="container-fluid inputs-con mt-5">
         <Form className="m-5">
 
             <div className="mb-4 mt-5 w-75 input-in">
             {error && <Alert variant="danger">{error}</Alert>}
+            <div className="row">
+            <div className="col col-md-6">
+              <h1>{Selector}</h1>
+            </div>
+                                        <div className="col col-md-6">
                   <label for="exampleInputEmail1" class="form-label acc-label">Name</label>
                   <div className="acc-icon-input"><i class="bi bi-person-fill"></i></div>
-                  <input type="email" 
+                  <input type="text"   onChange={(e) => setFirstname(e.target.value)}
                   class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder={Firstname}></input>
+              </div>
+              </div>
               </div>
 
               <div className="mb-4 mt-2 w-75 input-in">
@@ -85,7 +108,7 @@ const AccountScreen = () => {
                                         <label for="exampleInputEmail1" class="form-label acc-label"> Address</label>
                                             <div className="mb-4 input-in">
                                                 <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
-                                                <input type="name" 
+                                                <input type="name"   onChange={(e) => setAddress(e.target.value)}
                                                     class="form-control" id="userEmailAccount" aria-describedby="userEmail"
                                                      placeholder={Address}></input>
                                             </div>
@@ -94,7 +117,7 @@ const AccountScreen = () => {
                                         <label for="exampleInputEmail1" class="form-label acc-label"> Surname</label>
                                             <div className="mb-4 input-in">
                                                 <div className="acc-icon-input"><i class="bi bi-file-person-fill"></i></div>
-                                                <input type="name" 
+                                                <input type="name"   onChange={(e) => setLastname(e.target.value)}
                                                     class="form-control" id="userEmailAccount" 
                                                     aria-describedby="userEmail" placeholder={Lastname}></input>
                                             </div>
@@ -102,9 +125,10 @@ const AccountScreen = () => {
                                     </div>
 
               <div className="mb-4 mt-2 w-75 input-in">
-                  <label for="exampleInputEmail1" class="form-label acc-label">Phone Number</label>
+                  <label for="exampleInputEmail1" class="form-label acc-label">Highest Qualification</label>
                   <div className="acc-icon-input"><i class="bi bi-telephone-fill"></i></div>
-                  <input type="tel" class="form-control" id="userEmailAccount" aria-describedby="userEmail" placeholder={Phonenumber}></input>
+                  <input type="text" class="form-control" id="userEmailAccount" 
+                  onChange={(e) => setPhonenumber(e.target.value)} aria-describedby="userEmail" placeholder={Phonenumber}></input>
               </div>
 
               {/* <div className="mb-4 mt-2 w-75 input-in">
@@ -148,7 +172,8 @@ const AccountScreen = () => {
                     </Modal>
               </div> */}
 
-              {/* <Button type="submit" className="btn d-block acc-update-btn mt-4">UPDATE DETAILS</Button> */}
+              <Button type="submit" className="btn d-block acc-update-btn mt-4"
+              onClick={() => updateBooking(user,Phonenumber,Address,Lastname,Firstname)}>UPDATE DETAILS</Button>
 
         </Form>
       </div>
