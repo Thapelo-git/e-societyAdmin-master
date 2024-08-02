@@ -68,14 +68,21 @@ const SideNavBar = () => {
                                     </div>
                                     Payments
                                 </a>
-                        </li> */}
+                        </li> */}<li className="p-0 m-0 list-down" id="about">
+                            <a href="/about">
+                                    <div className="icon">
+                                        <i class="bi bi-info-square-fill nav-icons"></i>
+                                    </div>
+                                    About Student
+                                </a>
+                        </li> 
 
                         <li className="p-0 m-0 list-down" id="account">
                             <a href="/account">
                                     <div className="icon">
                                         <i class="bi bi-person-workspace nav-icons"></i>
                                     </div>
-                                    Account
+                                    Update Details
                                 </a>
                         </li>
                         <li className="logout">

@@ -31,8 +31,8 @@ const NavAndRouters = ({otherNavRouters}) => {
                       <Route path='/reports' ><ReportScreen/></Route>
                       <Route  path='/about' ><AboutSociety/></Route>
                       <Route path='/account'><AccountScreen/></Route>
-                      <Route exact path='/' ><AddEventsScreen/></Route>
-                      <Route path='/events' ><AddEventsScreen/></Route>
+                      {/* <Route exact path='/' ><AddEventsScreen/></Route>
+                      <Route path='/events' ><AddEventsScreen/></Route> */}
                       <Route path='/manage'><ManageEvents/></Route>
                       <Route path='/createEvents'><CreateEvents/></Route>
                       <Route path='/eventReports'><EventReports/></Route>

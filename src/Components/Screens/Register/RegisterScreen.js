@@ -100,7 +100,7 @@ const RegisterScreen = () => {
                                         <div className="col col-md-6">
                                         <select class="custom-select" id="gender3" 
           value={selector} onChange={e=>setSelector(e.target.value)} >
-            <option selected>Choose...</option>
+            <option selected>Title</option>
             <option  name="Mr" >Mr</option>
             <option name="Miss" >Miss</option>
             <option name="Mrs" >Mrs</option>

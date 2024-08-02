@@ -47,7 +47,7 @@ const LoginScreen = () => {
                     <Card className="con-login">
                         <Card.Body className="justify-content-center text-center con-login">
                             <img src={Logo} alt="logo"/>
-                            <h5 className="text-secondary proj-name">Student Register</h5>
+                            <h5 className="text-secondary proj-name">Student Portal</h5>
                             {error && <Alert variant="danger">{error}</Alert>}
                             <div className="inputs mt-3 justify-content-center align-items-center tex-center">
                                 <Form className="form" onSubmit={handleSubmit}>

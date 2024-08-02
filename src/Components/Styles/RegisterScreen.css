@@ -24,13 +24,14 @@
 @media screen and (min-width:1900px){
   .main-register-con{
     background-color: transparent;
-    width: 55vw;
+    width: 100%;
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 100vh;
+    height: 100%;
   }
   .card-register{
-    height: 60vh;
+    height: 100%;
+    width: 100%;
   }
 }
